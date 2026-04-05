@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // We fetch each component HTML file and inject it into the main page
     async function loadComponents() {
         // Removed 'rsvp' as it was deleted by the user causing the fetch to fail
-        const components = ['hero', 'story', 'families', 'event', 'venue', 'footer'];
+        const components = ['hero', 'story', 'families', 'event', 'venue', 'compliments', 'footer'];
         try {
             for (const comp of components) {
                 const response = await fetch(`components/${comp}.html`);

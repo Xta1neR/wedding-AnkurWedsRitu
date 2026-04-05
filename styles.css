@@ -15,7 +15,7 @@
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
     --font-caps: 'Montserrat', sans-serif;
-    --font-cursive: 'Great Vibes', cursive;
+    --font-cursive: 'Alex Brush', cursive;
     --font-devanagari: 'Yatra One', cursive;
 }
 
@@ -132,7 +132,7 @@ body {
 
 .gate-names {
     font-family: var(--font-cursive);
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     color: var(--clr-brand);
     margin-bottom: 2rem;
     line-height: 1;
@@ -248,7 +248,7 @@ body {
 
 .devanagari-gold {
     font-family: var(--font-devanagari);
-    font-size: 2.8rem;
+    font-size: 2rem;
     color: var(--clr-brand);
     letter-spacing: 2px;
 }
@@ -330,11 +330,11 @@ body {
 }
 
 .hero-title-elegant {
-    font-family: var(--font-caps);
-    font-size: 3rem;
-    letter-spacing: 4px;
+    font-family: var(--font-cursive);
+    font-size: 8rem;
+    letter-spacing: 0px;
     color: var(--clr-brand);
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .hero-title-elegant span {
@@ -380,7 +380,7 @@ body {
    ========================================= */
 .story-scene {
     min-height: 120vh;
-    padding: 6rem 0;
+    padding: 4rem 0;
     background-color: var(--clr-cream);
     position: relative;
     overflow: hidden;
@@ -951,28 +951,33 @@ body {
 }
 
 /* Ensure depth ordering */
-.events-image:nth-child(1) {
+.events-image:nth-of-type(1) {
     z-index: 10;
     box-shadow: none;
 }
 
-.events-image:nth-child(2) {
+.events-image:nth-of-type(2) {
     z-index: 11;
     clip-path: inset(100% 0% 0% 0%);
 }
 
-.events-image:nth-child(3) {
+.events-image:nth-of-type(3) {
     z-index: 12;
     clip-path: inset(100% 0% 0% 0%);
 }
 
-.events-image:nth-child(4) {
+.events-image:nth-of-type(4) {
     z-index: 13;
     clip-path: inset(100% 0% 0% 0%);
 }
 
-.events-image:nth-child(5) {
+.events-image:nth-of-type(5) {
     z-index: 14;
+    clip-path: inset(100% 0% 0% 0%);
+}
+
+.events-image:nth-of-type(6) {
+    z-index: 15;
     clip-path: inset(100% 0% 0% 0%);
 }
 
@@ -1014,5 +1019,90 @@ body {
 
     50% {
         transform: translateY(10px);
+    }
+}
+
+/* =========================================
+   COMPLIMENTS SCENE
+   ========================================= */
+.compliments-scene {
+    background-color: var(--clr-cream);
+    padding: 6rem 20px;
+    position: relative;
+    border-top: 1px solid rgba(221, 177, 102, 0.3);
+}
+
+.compliments-title {
+    font-family: var(--font-cursive);
+    font-size: 4.5rem;
+    color: var(--clr-brand);
+    margin-bottom: 4rem;
+}
+
+.compliments-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.compliments-col {
+    text-align: center;
+    flex: 1;
+    min-width: 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(221, 177, 102, 0.2);
+}
+
+.compliments-role {
+    font-family: var(--font-caps);
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: var(--clr-gold);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.compliments-name {
+    font-family: var(--font-sans);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--clr-brand);
+    margin-bottom: 0.5rem;
+}
+
+/* Mobile Adjustments for Side-by-Side Compliments */
+@media (max-width: 768px) {
+    .compliments-scene {
+        padding: 4rem 10px;
+    }
+
+    .compliments-title {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .compliments-flex {
+        gap: 0.5rem;
+    }
+
+    .compliments-col {
+        padding: 1.5rem 0.5rem;
+        border-radius: 12px;
+    }
+
+    .compliments-role {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+
+    .compliments-name {
+        font-size: 1.1rem;
     }
 }
