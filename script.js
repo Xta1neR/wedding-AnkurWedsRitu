@@ -346,4 +346,34 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Export for Wax Seal Envelope to call instantly
         window.tryStartAudioAfterLoader = unlockAudio;
     }
+
+    // -----------------------------------------------------
+    // 4. PREVENT INSPECT ELEMENT & RIGHT CLICK (Basic deterrent)
+    // -----------------------------------------------------
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    });
+    
+    document.addEventListener("keydown", function (e) {
+        // Prevent F12
+        if (e.key === "F12" || e.keyCode === 123) {
+            e.preventDefault();
+        }
+        // Prevent Ctrl+Shift+I (or Cmd+Option+I on Mac)
+        if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i")) {
+            e.preventDefault();
+        }
+        // Prevent Ctrl+Shift+C (or Cmd+Option+C on Mac)
+        if (e.ctrlKey && e.shiftKey && (e.key === "C" || e.key === "c")) {
+            e.preventDefault();
+        }
+        // Prevent Ctrl+Shift+J (or Cmd+Option+J on Mac)
+        if (e.ctrlKey && e.shiftKey && (e.key === "J" || e.key === "j")) {
+            e.preventDefault();
+        }
+        // Prevent Ctrl+U (View Source)
+        if (e.ctrlKey && (e.key === "U" || e.key === "u")) {
+            e.preventDefault();
+        }
+    });
 });
