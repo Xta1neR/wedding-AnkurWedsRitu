@@ -405,7 +405,7 @@ body {
     font-family: var(--font-caps);
     font-size: 2rem;
     font-weight: 700;
-    color: var(--clr-brand);
+    color: whitesmoke;
     letter-spacing: 2px;
 }
 
