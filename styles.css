@@ -1089,6 +1089,7 @@ body {
 
     .compliments-flex {
         gap: 0.5rem;
+        padding: auto;
     }
 
     .compliments-col {
@@ -1106,3 +1107,4 @@ body {
         font-size: 1.1rem;
     }
 }
+
