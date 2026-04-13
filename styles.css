@@ -408,16 +408,18 @@ body {
     color: var(--clr-brand);
     letter-spacing: 2px;
     background: whitesmoke;
+    opacity: 0.8;
     padding: 4px 12px;
+    border-radius: 8px;
 }
 
 .silchar-name {
-    top: 20%;
+    top: 10%;
     left: 5%;
 }
 
 .patna-name {
-    top: 20%;
+    top: 10%;
     left: 5%;
 }
 
